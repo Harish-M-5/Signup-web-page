@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exact Two Page Auth UI</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 30px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    .slide-area {
+      width: 200%;
+      display: flex;
+      transition: transform .5s cubic-bezier(.22,.9,.27,1);
+    }
+
+    .shape {
+      opacity: .12;
+      position: absolute;
+    }
+
+    .input-field {
+      background: rgba(240, 242, 245, 0.95);
+      height: 52px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center items-center p-6">
+
+  <div class="max-w-5xl w-full h-[540px] bg-white card relative">
+
+    <!-- SLIDER -->
+    <div id="slider" class="slide-area h-full">
+
+      <!-- PAGE 1 LEFT (Green Welcome Back) -->
+      <div class="w-1/2 bg-emerald-400 flex justify-center items-center relative p-12">
+        
+        <!-- ORANGE SHAPE BOTTOM LEFT -->
+        <div class="shape -left-16 -bottom-20">
+          <svg width="240" height="240"><circle cx="120" cy="120" r="120" fill="#FFB938"/></svg>
+        </div>
+
+        <!-- GRID SHAPE TOP RIGHT -->
+        <div class="shape top-10 right-10">
+          <svg width="120" height="120"><rect width="120" height="120" fill="white" opacity="0.06" /></svg>
+        </div>
+
+        <div class="text-white max-w-xs">
+          <h1 class="text-4xl font-extrabold mb-4">Welcome Back!</h1>
+          <p class="opacity-90 mb-8 text-sm">To keep connected with us please login with your personal info</p>
+
+          <button id="goSignIn"
+            class="w-44 h-12 border-2 border-white rounded-full hover:bg-white hover:text-emerald-600 transition">
+            SIGN IN
+          </button>
+        </div>
+      </div>
+
+      <!-- PAGE 1 RIGHT (Create Account Form) -->
+      <div class="w-1/2 flex justify-center items-center p-12 bg-white relative">
+
+        <!-- RED SHAPE TOP RIGHT -->
+        <div class="shape -top-20 -right-20">
+          <svg width="280" height="280"><circle cx="140" cy="140" r="140" fill="#E95858"/></svg>
+        </div>
+
+        <div class="max-w-sm w-full">
+          <h1 class="text-3xl font-extrabold text-emerald-600 mb-6">Create Account</h1>
+
+          <div class="flex gap-3 mb-5">
+            <button class="w-10 h-10 border rounded-full grid place-items-center">f</button>
+            <button class="w-10 h-10 border rounded-full grid place-items-center">G+</button>
+            <button class="w-10 h-10 border rounded-full grid place-items-center">in</button>
+          </div>
+
+          <p class="text-gray-400 text-sm mb-4">or use your email for registration:</p>
+
+          <div class="space-y-3 mb-6">
+            <input class="w-full input-field px-4" placeholder="Name">
+            <input class="w-full input-field px-4" placeholder="Email">
+            <input type="password" class="w-full input-field px-4" placeholder="Password">
+          </div>
+
+          <button id="signUp" 
+            class="bg-emerald-500 hover:bg-emerald-600 text-white w-full py-3 rounded-full shadow">
+            SIGN UP
+          </button>
+
+          <p class="text-xs text-center text-gray-500 mt-4">
+            Already have an account?
+            <button id="goSignIn2" class="text-emerald-600">Sign In</button>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="w-1/2 bg-white flex justify-center items-center p-12 relative">
+
+        <div class="shape -left-16 -bottom-20">
+          <svg width="240" height="240"><circle cx="120" cy="120" r="120" fill="#FFB938"/></svg>
+        </div>
+
+        <div class="max-w-sm w-full">
+          <h1 class="text-3xl font-extrabold text-emerald-600 mb-6">Sign in to Diprella</h1>
+
+          <div class="flex gap-3 mb-5">
+            <button class="w-10 h-10 border rounded-full grid place-items-center">f</button>
+            <button class="w-10 h-10 border rounded-full grid place-items-center">G+</button>
+            <button class="w-10 h-10 border rounded-full grid place-items-center">in</button>
+          </div>
+
+          <p class="text-gray-400 text-sm mb-4">or use Phone Number :</p>
+
+          <div class="space-y-3 mb-4">
+            <input class="w-full input-field px-4" placeholder="Phone Number">
+            <input type="password" class="w-full input-field px-4" placeholder="OPT">
+          </div>
+
+          <p class="text-sm underline text-gray-500 mb-6">Forgot your password?</p>
+
+          <button id="signIn"
+            class="bg-emerald-500 hover:bg-emerald-600 text-white w-full py-3 rounded-full shadow">
+            SIGN IN
+          </button>
+        </div>
+      </div>
+
+      <div class="w-1/2 bg-emerald-400 flex justify-center items-center relative p-12">
+
+
+        <div class="shape -right-20 -top-20">
+          <svg width="260" height="260"><circle cx="130" cy="130" r="130" fill="#E95858"/></svg>
+        </div>
+
+        <div class="text-white text-right max-w-xs">
+          <h1 class="text-4xl font-extrabold mb-4">Hello, Friend!</h1>
+          <p class="opacity-90 mb-8 text-sm">Enter your personal details and start journey with us</p>
+
+          <button id="goSignUp"
+            class="w-44 h-12 border-2 border-white rounded-full hover:bg-white hover:text-emerald-600 transition">
+            SIGN UP
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  const slider = document.getElementById("slider");
+
+  function showSignUp() { slider.style.transform = "translateX(0%)"; }
+  function showSignIn() { slider.style.transform = "translateX(-50%)"; }
+
+  document.getElementById("goSignIn").onclick = showSignIn;
+  document.getElementById("goSignIn2").onclick = showSignIn;
+  document.getElementById("goSignUp").onclick = showSignUp;
+
+  document.getElementById("signIn").onclick = e => {
+    e.preventDefault();
+    alert("Sign In Clicked!");
+  };
+
+  document.getElementById("signUp").onclick = e => {
+    e.preventDefault();
+    alert("Sign Up Clicked!");
+  };
+
+  showSignUp();
+</script>
+
+</body>
+</html>
