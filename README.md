@@ -6,8 +6,7 @@ Modern two-page auth UI using html,tailwind css and JS.Clean login/signup screen
 
 ### 🚀 Introduction
 
-This project is a Two-Page Authentication UI built using React.js + Tailwind CSS.
-It includes a Login Page and a Signup Page, smooth navigation between both screens, responsive layout, modern gradient backgrounds, and card-style UI components.
+This project is a Two-Page Authentication UI built using Html,Tailwind CSS and JavaScript.It includes a Login Page and a Signup Page, smooth navigation between both screens, responsive layout, modern gradient backgrounds and card-style UI components.
 
 
 ---
@@ -16,8 +15,6 @@ It includes a Login Page and a Signup Page, smooth navigation between both scree
 
 This UI template helps beginners understand how authentication pages are structured.
 It demonstrates:
-
-Navigating between multiple pages without Vite
 
 Tailwind-based styling
 
@@ -28,8 +25,7 @@ Component splitting
 Reusable classes
 
 
-This project is frontend-only and does not include backend authentication logic.
-
+This project is frontend-only
 
 ---
 
@@ -37,15 +33,11 @@ This project is frontend-only and does not include backend authentication logic.
 
 Modern Auth UI
 
-Red & Orange Gradient Background
-
 Glassmorphism Card Style
 
 Login → Signup Page Navigation
 
 Signup → Login Page Return
-
-Fully Mobile Responsive
 
 Clean Tailwind Utility Classes
 
@@ -55,16 +47,11 @@ Clean Tailwind Utility Classes
 
 ### 🛠 Technology Used:
 
-React.js – component-based UI
-
 Tailwind CSS (CDN) – utility-first styling
 
 HTML5 – structure
 
 JavaScript (ES6) – interactive logic
-
-React Router (optional) – page route handling
-
 
 
 ---
