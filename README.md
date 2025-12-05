@@ -4,7 +4,6 @@ Modern two-page auth UI using html,tailwind css and JS.Clean login/signup screen
 ---
 
 
-
 ### 🚀 Introduction
 
 This project is a Two-Page Authentication UI built using React.js + Tailwind CSS.
@@ -174,14 +173,13 @@ onClick={() => setPage("login")}
 ✔ Comes back to Login Page
 
 
+---
 
 ### 📂 Folder Structure
 
 /Signup
  ├── index.html
  └── README.md 
-
-
 
 ---
 
